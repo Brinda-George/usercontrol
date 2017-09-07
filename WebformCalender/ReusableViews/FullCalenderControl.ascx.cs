@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using static WebformCalender.Models.CalenderModels;
 
 namespace WebformCalender.ReusableViews
 {
@@ -49,6 +50,7 @@ namespace WebformCalender.ReusableViews
 
         protected void CalDate_SelectionChanged(object sender, EventArgs e)
         {
+            var dateSelectedEventData = new DateSelectedEventArgs(CalDate.SelectedDate);
             txtDate.Text = CalDate.SelectedDate.ToString("MM-dd-yy");
             CalDate.Visible = false;
         }
@@ -61,5 +63,7 @@ namespace WebformCalender.ReusableViews
                 e.Day.IsSelectable = false;
             }
         }
+
+        public delegate void DateSelectedEventHandler(object sender, DateSelectedEventArgs e);
     }
 }

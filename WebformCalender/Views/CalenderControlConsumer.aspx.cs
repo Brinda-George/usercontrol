@@ -19,5 +19,6 @@ namespace WebformCalender.Views
             lblSelectedDate.Text = cusCalender.SelectedDate.ToString();
             
         }
+        
     }
 }
