@@ -11,7 +11,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <cc1:CompositeCalender ID="CompositeCalender1" runat="server" />
+        <cc1:CompositeCalender ID="CompositeCalender1" runat="server" DisplayText="DoB" ImageUrl="~\Images\calendar.png" DisableFutureDates="true"/>
     </div>
     </form>
 </body>

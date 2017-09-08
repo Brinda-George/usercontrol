@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CalenderControlConsumer.aspx.cs" Inherits="WebformCalender.Views.CalenderControlConsumer" %>
 
+<%@ Register Assembly="ServerControlNew" Namespace="ServerControlNew" TagPrefix="cc1" %>
+
 <%@ Register Src="~/ReusableViews/FullCalenderControl.ascx" TagPrefix="uc1" TagName="FullCalenderControl" %>
 
 

@@ -98,7 +98,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CachedControl.ascx" />
+    <Content Include="CachingDemo.aspx" />
     <Content Include="compositeCalenderConsumer.aspx" />
+    <Content Include="FragmentCachingDemo.aspx" />
+    <Content Include="FragmentCachingDemo2.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -121,12 +125,40 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CachedControl.ascx.cs">
+      <DependentUpon>CachedControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CachedControl.ascx.designer.cs">
+      <DependentUpon>CachedControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CachingDemo.aspx.cs">
+      <DependentUpon>CachingDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CachingDemo.aspx.designer.cs">
+      <DependentUpon>CachingDemo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="compositeCalenderConsumer.aspx.cs">
       <DependentUpon>compositeCalenderConsumer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="compositeCalenderConsumer.aspx.designer.cs">
       <DependentUpon>compositeCalenderConsumer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FragmentCachingDemo.aspx.cs">
+      <DependentUpon>FragmentCachingDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FragmentCachingDemo.aspx.designer.cs">
+      <DependentUpon>FragmentCachingDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FragmentCachingDemo2.aspx.cs">
+      <DependentUpon>FragmentCachingDemo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FragmentCachingDemo2.aspx.designer.cs">
+      <DependentUpon>FragmentCachingDemo2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

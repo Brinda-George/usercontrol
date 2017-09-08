@@ -9,19 +9,20 @@ namespace WebformCalender.Models
     {
         public class DateSelectedEventArgs : EventArgs
         {
-            private DateTime _selectedDate;
+            private DateTime selectedDate;
+
             public DateTime SelectedDate
             {
-                get
-                {
-                    return _selectedDate;
-                }
-            }
-            public DateSelectedEventArgs(DateTime selectedDate)
-            {
-                _selectedDate = selectedDate;
+                get { return selectedDate; }
+                set { selectedDate = value; }
             }
 
+            public DateSelectedEventArgs(DateTime selectedDate)
+            {
+                this.selectedDate = selectedDate;
+            }
         }
+
+        public delegate void DateSelectedEventHandler(object sender, DateSelectedEventArgs e);
     }
 }

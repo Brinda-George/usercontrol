@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +10,50 @@ using System.Web.UI.WebControls;
 
 namespace ServerControlNew
 {
+    [ToolboxData("<{0}:CustomCalender runat=server></{0}:CustomCalender>")]
+    [ToolboxBitmap(@"C:\Users\brgeorge\documents\visual studio 2015\Projects\WebformCalender\WebformCalender\Images\calendar.png")]
     public class CompositeCalender: CompositeControl
     {
         Label lblDisplay;
         TextBox txtHolder;
         ImageButton imgCalender;
         Calendar calDateSelector;
+
+        [Category("Appearance")]
+        [Description("Logo for the Button")]
         public string ImageUrl
         {
-            get { return ImageUrl; }
-            set { imgCalender.ImageUrl = value; }
+            get
+            {
+                EnsureChildControls();
+                return imgCalender.ImageUrl ?? string.Empty;
+            }
+            set
+            {
+                EnsureChildControls();
+                imgCalender.ImageUrl = value;
+            }
+        }
+        public string DisplayText
+        {
+            get
+            {
+                EnsureChildControls();
+                return lblDisplay.Text ?? string.Empty;
+            }
+            set
+            {
+                EnsureChildControls();
+                lblDisplay.Text = value;
+            }
+        }
+        private bool disableFutureDates;
+        public bool DisableFutureDates
+        {
+            set
+            {
+                disableFutureDates = value;
+            }
         }
 
         protected override void CreateChildControls()
@@ -25,6 +61,7 @@ namespace ServerControlNew
             Controls.Clear();
             lblDisplay = new Label();
             lblDisplay.ID = "lblDisplay";
+            lblDisplay.Text = DisplayText;
 
             txtHolder = new TextBox();
             txtHolder.ID = "txtHolder";
