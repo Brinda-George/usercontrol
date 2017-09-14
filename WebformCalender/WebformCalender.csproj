@@ -186,6 +186,7 @@
     <Compile Include="Views\UserControlDemo.aspx.designer.cs">
       <DependentUpon>UserControlDemo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebCustomControl1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

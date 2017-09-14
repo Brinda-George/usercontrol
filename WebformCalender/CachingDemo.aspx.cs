@@ -17,14 +17,14 @@ namespace WebformCalender
             //Response.Cache.SetExpires(DateTime.Now.AddSeconds(60));
             //Response.Cache.VaryByParams["None"] = true;
             //Response.Cache.SetCacheability(HttpCacheability.Server);
-            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
-            SqlConnection con = new SqlConnection(CS);
-            SqlDataAdapter da = new SqlDataAdapter("spGetEmployee", con);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DataSet DS = new DataSet();
-            da.Fill(DS);
-            GridView1.DataSource = DS;
-            GridView1.DataBind();
+            //string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            //SqlConnection con = new SqlConnection(CS);
+            //SqlDataAdapter da = new SqlDataAdapter("spGetEmployee", con);
+            //da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            //DataSet DS = new DataSet();
+            //da.Fill(DS);
+            //GridView1.DataSource = DS;
+            //GridView1.DataBind();
             Label1.Text = DateTime.Now.ToString();
             if (!IsPostBack)
             {
